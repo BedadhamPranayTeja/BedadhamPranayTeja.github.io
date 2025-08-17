@@ -1,1 +1,1 @@
-# portfolio.github.io
+# resume.github.io
