@@ -1,235 +1,500 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pranay Teja - Resume</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    animation: {
-                        shimmer: 'shimmer 3s ease-in-out infinite',
-                        fadeInUp: 'fadeInUp 0.6s ease forwards'
-                    },
-                    keyframes: {
-                        shimmer: {
-                            '0%, 100%': { transform: 'translateX(-20px) translateY(-20px)' },
-                            '50%': { transform: 'translateX(20px) translateY(20px)' }
-                        },
-                        fadeInUp: {
-                            'to': { opacity: '1', transform: 'translateY(0)' }
-                        }
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            animation: {
+              shimmer: "shimmer 3s ease-in-out infinite",
+              fadeInUp: "fadeInUp 0.6s ease forwards",
+            },
+            keyframes: {
+              shimmer: {
+                "0%, 100%": {
+                  transform: "translateX(-20px) translateY(-20px)",
+                },
+                "50%": { transform: "translateX(20px) translateY(20px)" },
+              },
+              fadeInUp: {
+                to: { opacity: "1", transform: "translateY(0)" },
+              },
+            },
+          },
+        },
+      };
     </script>
     <style type="text/css">
-        .animate-delay-100 { animation-delay: 0.1s; }
-        .animate-delay-200 { animation-delay: 0.2s; }
-        .animate-delay-300 { animation-delay: 0.3s; }
-        .animate-delay-400 { animation-delay: 0.4s; }
-        
-        .header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-            animation: shimmer 3s ease-in-out infinite;
-        }
-        
-        .navbar-link::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s;
-        }
-        
-        .navbar-link:hover::before {
-            left: 100%;
-        }
-        
-        .section-heading::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 50px;
-            height: 2px;
-            background: #ef4444;
-        }
-        
-        .achievement-item::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #10b981;
-            font-weight: bold;
-            font-size: 1.2em;
-        }
+      .animate-delay-100 {
+        animation-delay: 0.1s;
+      }
+      .animate-delay-200 {
+        animation-delay: 0.2s;
+      }
+      .animate-delay-300 {
+        animation-delay: 0.3s;
+      }
+      .animate-delay-400 {
+        animation-delay: 0.4s;
+      }
+
+      .header::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.1) 0%,
+          transparent 70%
+        );
+        animation: shimmer 3s ease-in-out infinite;
+      }
+
+      .navbar-link::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+        transition: left 0.5s;
+      }
+
+      .navbar-link:hover::before {
+        left: 100%;
+      }
+
+      .section-heading::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 50px;
+        height: 2px;
+        background: #ef4444;
+      }
+
+      .achievement-item::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #10b981;
+        font-weight: bold;
+        font-size: 1.2em;
+      }
     </style>
-</head>
-<body class="bg-gradient-to-br from-indigo-600 to-purple-700 min-h-screen">
-    <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden my-5">
-        <!-- Header -->
-        <div class="header bg-gradient-to-br from-gray-800 to-blue-600 text-white py-10 px-5 text-center relative overflow-hidden">
-            <div class="profile-img w-32 h-32 rounded-full bg-gradient-to-r from-red-400 to-teal-400 flex items-center justify-center mx-auto mb-5 text-5xl font-bold text-white relative z-10 shadow-lg">PT</div>
-            <h1 class="text-4xl font-bold mb-3 relative z-10">Pranay Teja</h1>
-            <p class="tagline text-xl opacity-90 relative z-10">Full-Stack Developer | Hackathon Builder | Systems Thinker</p>
+  </head>
+  <body class="bg-gradient-to-br from-indigo-600 to-purple-700 min-h-screen">
+    <div
+      class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden my-5"
+    >
+      <!-- Header -->
+      <div
+        class="header bg-gradient-to-br from-gray-800 to-blue-600 text-white py-10 px-5 text-center relative overflow-hidden"
+      >
+        <div
+          class="profile-img w-32 h-32 rounded-full bg-gradient-to-r from-red-400 to-teal-400 flex items-center justify-center mx-auto mb-5 text-5xl font-bold text-white relative z-10 shadow-lg"
+        >
+          PT
+        </div>
+        <h1 class="text-4xl font-bold mb-3 relative z-10">Pranay Teja</h1>
+        <p class="tagline text-xl opacity-90 relative z-10">
+          Full-Stack Developer | Hackathon Builder | Systems Thinker
+        </p>
+      </div>
+
+      <!-- Navbar -->
+      <nav class="navbar bg-gray-700 py-4 text-center">
+        <a
+          href="https://www.linkedin.com/in/pranay-teja-260o58483/"
+          class="navbar-link text-white no-underline mx-5 py-2 px-5 rounded-full transition-all duration-300 inline-block relative overflow-hidden"
+          >LinkedIn</a
+        >
+        <a
+          href="https://github.com/BedadhamPranayTeja"
+          class="navbar-link text-white no-underline mx-5 py-2 px-5 rounded-full transition-all duration-300 inline-block relative overflow-hidden"
+          >GitHub</a
+        >
+        <a
+          href="mailto:pranay58483@gmail.com"
+          class="navbar-link text-white no-underline mx-5 py-2 px-5 rounded-full transition-all duration-300 inline-block relative overflow-hidden"
+          >Gmail</a
+        >
+        <a
+          href="tel:+91-7013052766"
+          class="navbar-link text-white no-underline mx-5 py-2 px-5 rounded-full transition-all duration-300 inline-block relative overflow-hidden"
+          >Phone</a
+        >
+      </nav>
+
+      <!-- Intro Section -->
+      <section
+        class="intro bg-gray-50 py-8 px-10 text-center text-lg leading-relaxed border-l-4 border-blue-500"
+      >
+        <p>
+          Passionate full-stack developer with hands-on experience in building
+          hackathon projects and personal prototypes. Comfortable working across
+          frontend (React, Tailwind, Zustand) and backend (FastAPI,
+          Node/Express, MongoDB, SQLModel) stacks. Strong focus on system
+          design, developer workflows, and collaborative documentation.
+        </p>
+      </section>
+
+      <!-- Main Content -->
+      <div class="main-content grid grid-cols-1 md:grid-cols-12">
+        <!-- Left Column -->
+        <div class="left-column col-span-7 p-10 bg-white">
+          <!-- Education -->
+          <div
+            class="section mb-10 opacity-0 animate-fadeInUp animate-delay-100"
+          >
+            <h2
+              class="section-heading text-2xl text-gray-800 font-bold mb-5 pb-2 border-b-2 border-blue-500 relative"
+            >
+              Education
+            </h2>
+            <h3 class="text-xl text-gray-700 font-semibold mb-1">
+              B.Tech Computer Science Engineering
+            </h3>
+            <p class="text-gray-600">
+              Sreyas Institute of Engineering and Technology
+            </p>
+            <p class="date text-gray-500 italic text-sm">
+              Expected Graduation: 2028
+            </p>
+          </div>
+
+          <!-- Experience -->
+          <div
+            class="section mb-10 opacity-0 animate-fadeInUp animate-delay-200"
+          >
+            <h2
+              class="section-heading text-2xl text-gray-800 font-bold mb-5 pb-2 border-b-2 border-blue-500 relative"
+            >
+              Hackathon Experience
+            </h2>
+
+            <h3
+              class="text-xl text-gray-700 font-semibold mb-1 mt-5 first:mt-0"
+            >
+              BITS Hyderabad Hackathon
+              <span class="date text-gray-500 italic text-sm"
+                >(22-23rd Mar 2025)</span
+              >
+            </h3>
+            <p class="font-semibold text-gray-800">Event Management System</p>
+            <ul class="list-disc pl-5 mt-2 space-y-1">
+              <li>Planned wireframes and user flow for an event platform</li>
+              <li>
+                Contributed initial React + Tailwind frontend while
+                strengthening fundamentals
+              </li>
+              <li>
+                Learned teamwork under time pressure despite limited coding
+                fluency
+              </li>
+            </ul>
+
+            <h3 class="text-xl text-gray-700 font-semibold mb-1 mt-5">
+              WiseIn Hackathon
+              <span class="date text-gray-500 italic text-sm"
+                >(3rd Apr 2025)</span
+              >
+            </h3>
+            <p class="font-semibold text-gray-800">Project Management App</p>
+            <ul class="list-disc pl-5 mt-2 space-y-1">
+              <li>Designed ERD, flow, and backend logic</li>
+              <li>
+                Built backend APIs (Node.js/Express + MongoDB), tested in
+                Postman
+              </li>
+              <li>Delivered functional backend but missed API documentation</li>
+            </ul>
+
+            <h3 class="text-xl text-gray-700 font-semibold mb-1 mt-5">
+              Hackattack Hackathon
+              <span class="date text-gray-500 italic text-sm"
+                >(24-25th Apr 2025)</span
+              >
+            </h3>
+            <p class="font-semibold text-gray-800">
+              Crime Reporting & Emergency Management
+            </p>
+            <ul class="list-disc pl-5 mt-2 space-y-1">
+              <li>
+                Brainstormed features: reports vs emergencies, media upload,
+                live location
+              </li>
+              <li>Built form with map integration and basic auth</li>
+              <li>
+                Overcame frontend–backend mismatch, delivered working prototype
+              </li>
+            </ul>
+
+            <h3 class="text-xl text-gray-700 font-semibold mb-1 mt-5">
+              Hackprix Hackathon
+              <span class="date text-gray-500 italic text-sm"
+                >(14-15th Jun 2025)</span
+              >
+            </h3>
+            <p class="font-semibold text-gray-800">
+              SecureGate MVP (Solo Build)
+            </p>
+            <ul class="list-disc pl-5 mt-2 space-y-1">
+              <li>
+                Solo-scaffolded backend + frontend, authored ERD, API contract,
+                UI/UX specs
+              </li>
+              <li>Completed MVP on Replit within 24 hours</li>
+              <li>Established habit of documenting systems alongside code</li>
+            </ul>
+          </div>
+
+          <!-- Projects -->
+          <div
+            class="section mb-10 opacity-0 animate-fadeInUp animate-delay-300"
+          >
+            <h2
+              class="section-heading text-2xl text-gray-800 font-bold mb-5 pb-2 border-b-2 border-blue-500 relative"
+            >
+              Projects
+            </h2>
+
+            <h3
+              class="text-xl text-gray-700 font-semibold mb-1 mt-5 first:mt-0"
+            >
+              SecureGate – Crime Reporting & Emergency SaaS
+            </h3>
+            <p class="text-gray-600">
+              SaaS for gated communities with role-based dashboards
+              (user/admin). Features include crime reporting with media,
+              emergency buzzer with live connect, and history & feedback
+              systems.
+            </p>
+            <p class="font-medium text-gray-700 mt-2">
+              <strong>Stack:</strong> MERN, JWT auth, Postman testing
+            </p>
+            <p class="mt-2">
+              <a
+                href="https://c29678c0-8569-4588-917a-67216250918e-00-1eemyezazilyz.worf.replit.dev/"
+                class="project-link text-blue-500 font-medium no-underline hover:underline"
+                >Live Demo</a
+              >
+              |
+              <a
+                href="https://github.com/BedadhamPranayTeja/SecureGate_v1"
+                class="project-link text-blue-500 font-medium no-underline hover:underline"
+                >GitHub</a
+              >
+            </p>
+
+            <h3 class="text-xl text-gray-700 font-semibold mb-1 mt-5">
+              ChunkyAI – Semantic-Spatial Content Workspace
+            </h3>
+            <p class="text-gray-600">
+              Hybrid workspace combining chat, code, and tag-based visual
+              previews. Features chunk-based file model, GridView, FilePreview
+              (UI/Code/Map), AI-assisted collaborative workflows.
+            </p>
+            <p class="font-medium text-gray-700 mt-2">
+              <strong>Stack:</strong> FastAPI, SQLModel/SQLite, React (Vite),
+              Zustand, Tailwind
+            </p>
+            <p class="mt-2">
+              <a
+                href="https://340b370b-3ce8-4f23-8dc7-7e607316723e-00-2cv358ty1z64z.riker.replit.dev/"
+                class="project-link text-blue-500 font-medium no-underline hover:underline"
+                >Live Demo</a
+              >
+              |
+              <a
+                href="#"
+                class="project-link text-blue-500 font-medium no-underline hover:underline"
+                >GitHub</a
+              >
+            </p>
+          </div>
         </div>
 
-        <!-- Navbar -->
-        <nav class="navbar bg-gray-700 py-4 text-center">
-            <a href="https://linkedin.com/in/pranayteja" class="navbar-link text-white no-underline mx-5 py-2 px-5 rounded-full transition-all duration-300 inline-block relative overflow-hidden">LinkedIn</a>
-            <a href="https://github.com/pranayteja" class="navbar-link text-white no-underline mx-5 py-2 px-5 rounded-full transition-all duration-300 inline-block relative overflow-hidden">GitHub</a>
-            <a href="mailto:pranay@example.com" class="navbar-link text-white no-underline mx-5 py-2 px-5 rounded-full transition-all duration-300 inline-block relative overflow-hidden">Gmail</a>
-            <a href="tel:+91-9876543210" class="navbar-link text-white no-underline mx-5 py-2 px-5 rounded-full transition-all duration-300 inline-block relative overflow-hidden">Phone</a>
-        </nav>
-
-        <!-- Intro Section -->
-        <section class="intro bg-gray-50 py-8 px-10 text-center text-lg leading-relaxed border-l-4 border-blue-500">
-            <p>Passionate full-stack developer with hands-on experience in building hackathon projects and personal prototypes. Comfortable working across frontend (React, Tailwind, Zustand) and backend (FastAPI, Node/Express, MongoDB, SQLModel) stacks. Strong focus on system design, developer workflows, and collaborative documentation.</p>
-        </section>
-
-        <!-- Main Content -->
-        <div class="main-content grid grid-cols-1 md:grid-cols-12">
-            <!-- Left Column -->
-            <div class="left-column col-span-7 p-10 bg-white">
-                <!-- Education -->
-                <div class="section mb-10 opacity-0 animate-fadeInUp animate-delay-100">
-                    <h2 class="section-heading text-2xl text-gray-800 font-bold mb-5 pb-2 border-b-2 border-blue-500 relative">Education</h2>
-                    <h3 class="text-xl text-gray-700 font-semibold mb-1">B.Tech Computer Science Engineering</h3>
-                    <p class="text-gray-600">Sreyas Institute of Engineering and Technology</p>
-                    <p class="date text-gray-500 italic text-sm">Expected Graduation: 2028</p>
-                </div>
-
-                <!-- Experience -->
-                <div class="section mb-10 opacity-0 animate-fadeInUp animate-delay-200">
-                    <h2 class="section-heading text-2xl text-gray-800 font-bold mb-5 pb-2 border-b-2 border-blue-500 relative">Hackathon Experience</h2>
-                    
-                    <h3 class="text-xl text-gray-700 font-semibold mb-1 mt-5 first:mt-0">BITS Hyderabad Hackathon <span class="date text-gray-500 italic text-sm">(22-23rd Mar 2025)</span></h3>
-                    <p class="font-semibold text-gray-800">Event Management System</p>
-                    <ul class="list-disc pl-5 mt-2 space-y-1">
-                        <li>Planned wireframes and user flow for an event platform</li>
-                        <li>Contributed initial React + Tailwind frontend while strengthening fundamentals</li>
-                        <li>Learned teamwork under time pressure despite limited coding fluency</li>
-                    </ul>
-
-                    <h3 class="text-xl text-gray-700 font-semibold mb-1 mt-5">WiseIn Hackathon <span class="date text-gray-500 italic text-sm">(3rd Apr 2025)</span></h3>
-                    <p class="font-semibold text-gray-800">Project Management App</p>
-                    <ul class="list-disc pl-5 mt-2 space-y-1">
-                        <li>Designed ERD, flow, and backend logic</li>
-                        <li>Built backend APIs (Node.js/Express + MongoDB), tested in Postman</li>
-                        <li>Delivered functional backend but missed API documentation</li>
-                    </ul>
-
-                    <h3 class="text-xl text-gray-700 font-semibold mb-1 mt-5">Hackattack Hackathon <span class="date text-gray-500 italic text-sm">(24-25th Apr 2025)</span></h3>
-                    <p class="font-semibold text-gray-800">Crime Reporting & Emergency Management</p>
-                    <ul class="list-disc pl-5 mt-2 space-y-1">
-                        <li>Brainstormed features: reports vs emergencies, media upload, live location</li>
-                        <li>Built form with map integration and basic auth</li>
-                        <li>Overcame frontend–backend mismatch, delivered working prototype</li>
-                    </ul>
-
-                    <h3 class="text-xl text-gray-700 font-semibold mb-1 mt-5">Hackprix Hackathon <span class="date text-gray-500 italic text-sm">(14-15th Jun 2025)</span></h3>
-                    <p class="font-semibold text-gray-800">SecureGate MVP (Solo Build)</p>
-                    <ul class="list-disc pl-5 mt-2 space-y-1">
-                        <li>Solo-scaffolded backend + frontend, authored ERD, API contract, UI/UX specs</li>
-                        <li>Completed MVP on Replit within 24 hours</li>
-                        <li>Established habit of documenting systems alongside code</li>
-                    </ul>
-                </div>
-
-                <!-- Projects -->
-                <div class="section mb-10 opacity-0 animate-fadeInUp animate-delay-300">
-                    <h2 class="section-heading text-2xl text-gray-800 font-bold mb-5 pb-2 border-b-2 border-blue-500 relative">Projects</h2>
-                    
-                    <h3 class="text-xl text-gray-700 font-semibold mb-1 mt-5 first:mt-0">SecureGate – Crime Reporting & Emergency SaaS</h3>
-                    <p class="text-gray-600">SaaS for gated communities with role-based dashboards (user/admin). Features include crime reporting with media, emergency buzzer with live connect, and history & feedback systems.</p>
-                    <p class="font-medium text-gray-700 mt-2"><strong>Stack:</strong> MERN, JWT auth, Postman testing</p>
-                    <p class="mt-2"><a href="https://c29678c0-8569-4588-917a-67216250918e-00-1eemyezazilyz.worf.replit.dev/" class="project-link text-blue-500 font-medium no-underline hover:underline">Live Demo</a> | <a href="#" class="project-link text-blue-500 font-medium no-underline hover:underline">GitHub</a></p>
-
-                    <h3 class="text-xl text-gray-700 font-semibold mb-1 mt-5">ChunkyAI – Semantic-Spatial Content Workspace</h3>
-                    <p class="text-gray-600">Hybrid workspace combining chat, code, and tag-based visual previews. Features chunk-based file model, GridView, FilePreview (UI/Code/Map), AI-assisted collaborative workflows.</p>
-                    <p class="font-medium text-gray-700 mt-2"><strong>Stack:</strong> FastAPI, SQLModel/SQLite, React (Vite), Zustand, Tailwind</p>
-                    <p class="mt-2"><a href="https://340b370b-3ce8-4f23-8dc7-7e607316723e-00-2cv358ty1z64z.riker.replit.dev/" class="project-link text-blue-500 font-medium no-underline hover:underline">Live Demo</a> | <a href="#" class="project-link text-blue-500 font-medium no-underline hover:underline">GitHub</a></p>
-                </div>
+        <!-- Right Column -->
+        <div
+          class="right-column p-10 md:col-span-5 bg-gray-50 border-t md:border-t-0 md:border-l border-gray-200"
+        >
+          <!-- Skills -->
+          <div
+            class="section mb-10 opacity-0 animate-fadeInUp animate-delay-100"
+          >
+            <h2
+              class="section-heading text-2xl text-gray-800 font-bold mb-5 pb-2 border-b-2 border-blue-500 relative"
+            >
+              Skills
+            </h2>
+            <div class="skills-grid grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+              <div
+                class="skill-category bg-white p-4 rounded-lg shadow-sm border-l-4 border-blue-500"
+              >
+                <h4
+                  class="text-sm text-gray-700 font-bold uppercase tracking-wider mb-2"
+                >
+                  Frontend
+                </h4>
+                <p class="text-sm text-gray-600">
+                  React, TailwindCSS, Zustand, JavaScript, HTML, CSS
+                </p>
+              </div>
+              <div
+                class="skill-category bg-white p-4 rounded-lg shadow-sm border-l-4 border-blue-500"
+              >
+                <h4
+                  class="text-sm text-gray-700 font-bold uppercase tracking-wider mb-2"
+                >
+                  Backend
+                </h4>
+                <p class="text-sm text-gray-600">
+                  FastAPI, Node.js, Express, SQLModel, SQLAlchemy
+                </p>
+              </div>
+              <div
+                class="skill-category bg-white p-4 rounded-lg shadow-sm border-l-4 border-blue-500"
+              >
+                <h4
+                  class="text-sm text-gray-700 font-bold uppercase tracking-wider mb-2"
+                >
+                  Databases
+                </h4>
+                <p class="text-sm text-gray-600">PostgreSQL, SQLite, MongoDB</p>
+              </div>
+              <div
+                class="skill-category bg-white p-4 rounded-lg shadow-sm border-l-4 border-blue-500"
+              >
+                <h4
+                  class="text-sm text-gray-700 font-bold uppercase tracking-wider mb-2"
+                >
+                  Tools
+                </h4>
+                <p class="text-sm text-gray-600">
+                  GitHub, Postman, Docker, Replit
+                </p>
+              </div>
+              <div
+                class="skill-category bg-white p-4 rounded-lg shadow-sm border-l-4 border-blue-500"
+              >
+                <h4
+                  class="text-sm text-gray-700 font-bold uppercase tracking-wider mb-2"
+                >
+                  Languages
+                </h4>
+                <p class="text-sm text-gray-600">Python, JavaScript, C</p>
+              </div>
             </div>
+          </div>
 
-            <!-- Right Column -->
-            <div class="right-column p-10 md:col-span-5 bg-gray-50 border-t md:border-t-0 md:border-l border-gray-200">
-                <!-- Skills -->
-                <div class="section mb-10 opacity-0 animate-fadeInUp animate-delay-100">
-                    <h2 class="section-heading text-2xl text-gray-800 font-bold mb-5 pb-2 border-b-2 border-blue-500 relative">Skills</h2>
-                    <div class="skills-grid grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-                        <div class="skill-category bg-white p-4 rounded-lg shadow-sm border-l-4 border-blue-500">
-                            <h4 class="text-sm text-gray-700 font-bold uppercase tracking-wider mb-2">Frontend</h4>
-                            <p class="text-sm text-gray-600">React, TailwindCSS, Zustand, JavaScript, HTML, CSS</p>
-                        </div>
-                        <div class="skill-category bg-white p-4 rounded-lg shadow-sm border-l-4 border-blue-500">
-                            <h4 class="text-sm text-gray-700 font-bold uppercase tracking-wider mb-2">Backend</h4>
-                            <p class="text-sm text-gray-600">FastAPI, Node.js, Express, SQLModel, SQLAlchemy</p>
-                        </div>
-                        <div class="skill-category bg-white p-4 rounded-lg shadow-sm border-l-4 border-blue-500">
-                            <h4 class="text-sm text-gray-700 font-bold uppercase tracking-wider mb-2">Databases</h4>
-                            <p class="text-sm text-gray-600">PostgreSQL, SQLite, MongoDB</p>
-                        </div>
-                        <div class="skill-category bg-white p-4 rounded-lg shadow-sm border-l-4 border-blue-500">
-                            <h4 class="text-sm text-gray-700 font-bold uppercase tracking-wider mb-2">Tools</h4>
-                            <p class="text-sm text-gray-600">GitHub, Postman, Docker, Replit</p>
-                        </div>
-                        <div class="skill-category bg-white p-4 rounded-lg shadow-sm border-l-4 border-blue-500">
-                            <h4 class="text-sm text-gray-700 font-bold uppercase tracking-wider mb-2">Languages</h4>
-                            <p class="text-sm text-gray-600">Python, JavaScript, C</p>
-                        </div>
-                    </div>
-                </div>
+          <!-- Coursework -->
+          <div
+            class="section mb-10 opacity-0 animate-fadeInUp animate-delay-200"
+          >
+            <h2
+              class="section-heading text-2xl text-gray-800 font-bold mb-5 pb-2 border-b-2 border-blue-500 relative"
+            >
+              Coursework
+            </h2>
+            <h3 class="text-lg text-gray-700 font-semibold mb-1">
+              CS50P: Introduction to Programming with Python
+            </h3>
+            <p class="date text-gray-500 italic text-sm">edX – David Malan</p>
 
-                <!-- Coursework -->
-                <div class="section mb-10 opacity-0 animate-fadeInUp animate-delay-200">
-                    <h2 class="section-heading text-2xl text-gray-800 font-bold mb-5 pb-2 border-b-2 border-blue-500 relative">Coursework</h2>
-                    <h3 class="text-lg text-gray-700 font-semibold mb-1">CS50P: Introduction to Programming with Python</h3>
-                    <p class="date text-gray-500 italic text-sm">edX – David Malan</p>
-                    
-                    <h3 class="text-lg text-gray-700 font-semibold mb-1 mt-3">Full-Stack Web Development</h3>
-                    <p class="date text-gray-500 italic text-sm">Udemy – Hitesh Choudhary</p>
-                    
-                    <h3 class="text-lg text-gray-700 font-semibold mb-1 mt-3">FastAPI Backend Development</h3>
-                    <p class="date text-gray-500 italic text-sm">Udemy – Eric Roby</p>
-                </div>
+            <h3 class="text-lg text-gray-700 font-semibold mb-1 mt-3">
+              Full-Stack Web Development
+            </h3>
+            <p class="date text-gray-500 italic text-sm">
+              Udemy – Hitesh Choudhary
+            </p>
 
-                <!-- Achievements -->
-                <div class="section mb-10 opacity-0 animate-fadeInUp animate-delay-300">
-                    <h2 class="section-heading text-2xl text-gray-800 font-bold mb-5 pb-2 border-b-2 border-blue-500 relative">Achievements</h2>
-                    <ul class="achievements-list list-none pl-0">
-                        <li class="achievement-item py-3 pl-6 relative border-b border-gray-200 last:border-b-0">Participated in 4 hackathons with progressive skill evolution</li>
-                        <li class="achievement-item py-3 pl-6 relative border-b border-gray-200 last:border-b-0">Built and documented projects with professional developer standards</li>
-                        <li class="achievement-item py-3 pl-6 relative border-b border-gray-200 last:border-b-0">Independently scaffolded and deployed multiple prototypes</li>
-                        <li class="achievement-item py-3 pl-6 relative border-b border-gray-200 last:border-b-0">Developed from frontend → backend → full-stack → SaaS MVP</li>
-                    </ul>
-                </div>
+            <h3 class="text-lg text-gray-700 font-semibold mb-1 mt-3">
+              FastAPI Backend Development
+            </h3>
+            <p class="date text-gray-500 italic text-sm">Udemy – Eric Roby</p>
+          </div>
 
-                <!-- Hobbies -->
-                <div class="section opacity-0 animate-fadeInUp animate-delay-400">
-                    <h2 class="section-heading text-2xl text-gray-800 font-bold mb-5 pb-2 border-b-2 border-blue-500 relative">Hobbies</h2>
-                    <ul class="achievements-list list-none pl-0">
-                        <li class="achievement-item py-3 pl-6 relative border-b border-gray-200 last:border-b-0">Writing structured developer documentation</li>
-                        <li class="achievement-item py-3 pl-6 relative border-b border-gray-200 last:border-b-0">UI/UX prototyping and system design</li>
-                        <li class="achievement-item py-3 pl-6 relative border-b border-gray-200 last:border-b-0">Participating in hackathons & coding competitions</li>
-                        <li class="achievement-item py-3 pl-6 relative border-b border-gray-200 last:border-b-0">Building developer workflow tools</li>
-                    </ul>
-                </div>
-            </div>
+          <!-- Achievements -->
+          <div
+            class="section mb-10 opacity-0 animate-fadeInUp animate-delay-300"
+          >
+            <h2
+              class="section-heading text-2xl text-gray-800 font-bold mb-5 pb-2 border-b-2 border-blue-500 relative"
+            >
+              Achievements
+            </h2>
+            <ul class="achievements-list list-none pl-0">
+              <li
+                class="achievement-item py-3 pl-6 relative border-b border-gray-200 last:border-b-0"
+              >
+                Participated in 4 hackathons with progressive skill evolution
+              </li>
+              <li
+                class="achievement-item py-3 pl-6 relative border-b border-gray-200 last:border-b-0"
+              >
+                Built and documented projects with professional developer
+                standards
+              </li>
+              <li
+                class="achievement-item py-3 pl-6 relative border-b border-gray-200 last:border-b-0"
+              >
+                Independently scaffolded and deployed multiple prototypes
+              </li>
+              <li
+                class="achievement-item py-3 pl-6 relative border-b border-gray-200 last:border-b-0"
+              >
+                Developed from frontend → backend → full-stack → SaaS MVP
+              </li>
+            </ul>
+          </div>
+
+          <!-- Hobbies -->
+          <div class="section opacity-0 animate-fadeInUp animate-delay-400">
+            <h2
+              class="section-heading text-2xl text-gray-800 font-bold mb-5 pb-2 border-b-2 border-blue-500 relative"
+            >
+              Hobbies
+            </h2>
+            <ul class="achievements-list list-none pl-0">
+              <li
+                class="achievement-item py-3 pl-6 relative border-b border-gray-200 last:border-b-0"
+              >
+                Writing structured developer documentation
+              </li>
+              <li
+                class="achievement-item py-3 pl-6 relative border-b border-gray-200 last:border-b-0"
+              >
+                UI/UX prototyping and system design
+              </li>
+              <li
+                class="achievement-item py-3 pl-6 relative border-b border-gray-200 last:border-b-0"
+              >
+                Participating in hackathons & coding competitions
+              </li>
+              <li
+                class="achievement-item py-3 pl-6 relative border-b border-gray-200 last:border-b-0"
+              >
+                Building developer workflow tools
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
